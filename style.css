@@ -1,0 +1,326 @@
+body {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+    padding-top: 50px;
+}
+
+#beranda {
+    height: 90vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+
+/* Styling Navbar */
+/* Navbar dengan background putih dan font hitam */
+.navbar {
+    background-color: white !important; /* Ganti background navbar menjadi putih */
+}
+
+.navbar .navbar-brand, .navbar-nav .nav-link {
+    color: black !important; /* Ganti warna teks navbar menjadi hitam */
+}
+
+.navbar .navbar-toggler-icon {
+    background-color: blue !important; /* Ganti warna icon navbar (hamburger) menjadi hitam */
+}
+
+/* Menambahkan efek hover pada link */
+.navbar-nav .nav-link:hover {
+    color: #007bff !important; /* Warna biru saat dihover */
+}
+
+/* Responsif - Navbar collapse pada ukuran kecil */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+        font-size: 1.2rem; 
+    }
+}
+
+/* Shadow effect pada navbar */
+.navbar.shadow {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/5.jpeg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Media query untuk perangkat dengan layar kecil (mobile) */
+@media (max-width: 768px) {
+    .hero-section {
+        background-position: top center; /* Atur gambar agar lebih fokus ke bagian atas untuk mobile */
+        padding: 80px 15px; /* Sesuaikan padding agar lebih kompak pada layar kecil */
+    }
+}
+
+.about-section, .services-section {
+    padding: 60px 0;
+}
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.team-member img:hover {
+    transform: scale(1.1);
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Styling untuk footer */
+footer {
+    background-color: #333;  
+    color: #fff;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    opacity: 1;  
+    transform: translateY(0); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+footer p{
+    color: #fff;
+}
+
+footer.show-footer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer .footer-main {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 20px;
+}
+
+footer .footer-info {
+    flex: 1;
+    padding: 10px;
+}
+
+footer .footer-info p {
+    margin: 5px 0;
+}
+
+footer .footer-social {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .footer-social ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+footer .footer-social ul li {
+    margin: 0; 
+}
+
+footer .footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+footer .footer-social ul li a:hover {  
+    transform: scale(1.1); 
+}
+
+footer .footer-social ul li a:active i {
+    transform: scale(0.95); 
+}
+
+footer .footer-social ul li a:hover i.fa-facebook-f {
+    color: #3b5998; 
+}
+
+footer .footer-social ul li a:hover i.fa-instagram {
+    color: #e4405f; 
+}
+
+footer .footer-social ul li a:hover i.fa-linkedin-in {
+    color: #0077b5; 
+}
+
+footer .footer-social ul li a:hover i.fa-twitter {
+    color: #1da1f2; 
+}
+
+footer .footer-social ul li a:active i.fa-facebook-f {
+    color: #3b5998;
+}
+
+footer .footer-social ul li a:active i.fa-instagram {
+    color: #e4405f;
+}
+
+footer .footer-social ul li a:active i.fa-linkedin-in {
+    color: #0077b5;
+}
+
+footer .footer-social ul li a:active i.fa-twitter {
+    color: #1da1f2;
+}
+
+footer .footer-social ul li a i {
+    font-size: 24px; 
+    transition: transform 0.3s ease; 
+}
+
+footer .footer-social ul li a:hover i {
+    transform: scale(1.1); 
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+}
+
+footer .footer-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+footer .footer-links ul li {
+    display: inline-block;
+}
+
+footer .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-links ul li a:hover {
+    color: #4CAF50;
+}
+
+footer .footer-location {
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    footer .footer-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social ul {
+        display: flex;
+        justify-content: center; 
+        gap: 10px; 
+    }
+
+    .footer-links ul {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+/* Animasi Kustom */
+.section-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.section-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tombol Back to Top */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+#backToTop:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Formulir interaktif */
+input:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+/* Slider*/
+.slider-container {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+    padding: 10px 0;
+  }
+  
+  .slider-text {
+    white-space: nowrap;
+    color: #fff;
+    font-size: 24px;
+    animation: slide 10s linear infinite; 
+  }
+  
+  /* Efek animasi untuk teks bergerak */
+  @keyframes slide {
+    0% {
+      transform: translateX(100%); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
